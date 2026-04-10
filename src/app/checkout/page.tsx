@@ -11,7 +11,6 @@ import {
   ArrowLeft, Phone, MapPin, Tag,
   CreditCard, Loader2, ChevronRight, ShoppingBag
 } from "lucide-react";
-import Footer from "@/components/Footer";
 
 export default function CheckoutPage() {
   const { data: session, status } = useSession();
@@ -425,7 +424,6 @@ export default function CheckoutPage() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
