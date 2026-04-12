@@ -8,7 +8,6 @@ import {
   ChevronRight, CreditCard, Tag, ShieldCheck, Truck
 } from "lucide-react";
 import { useCart } from "@/components/CartProvider";
-import Footer from "@/components/Footer";
 
 export default function CartPage() {
   const { cart, removeFromCart, updateQuantity, cartTotal, cartCount } = useCart();
@@ -163,7 +162,6 @@ export default function CartPage() {
           </div>
         )}
       </div>
-      <Footer />
     </div>
   );
 }
