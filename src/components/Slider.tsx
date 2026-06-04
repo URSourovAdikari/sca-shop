@@ -159,6 +159,7 @@ export default function ImageSlider() {
   const [isTransitioning, setIsTransitioning] = useState<boolean>(true);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
   const [progress, setProgress] = useState<number>(0);
+  const [isDotClick, setIsDotClick] = useState<boolean>(false);
 
   const autoplayRef = useRef<NodeJS.Timeout | null>(null);
   const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -174,6 +175,7 @@ export default function ImageSlider() {
     if (isAnimating) return;
     setIsAnimating(true);
     setIsTransitioning(true);
+    setIsDotClick(false);
     setCurrentIndex((prevIndex) => prevIndex + 1);
   }, [isAnimating]);
 
@@ -181,13 +183,15 @@ export default function ImageSlider() {
     if (isAnimating) return;
     setIsAnimating(true);
     setIsTransitioning(true);
+    setIsDotClick(false);
     setCurrentIndex((prevIndex) => prevIndex - 1);
   }, [isAnimating]);
 
   const goToSlide = useCallback((index: number) => {
     if (isAnimating) return;
     setIsAnimating(true);
-    setIsTransitioning(true);
+    setIsTransitioning(false); // Disable transition for instant jump
+    setIsDotClick(true);
     setCurrentIndex(index + 1);
   }, [isAnimating]);
 
@@ -222,8 +226,12 @@ export default function ImageSlider() {
           sliderElement.removeEventListener("transitionend", handleTransitionEnd);
         }
       };
+    } else if (isDotClick && !isTransitioning) {
+      // After instant jump, enable transition for next slide changes
+      setIsAnimating(false);
+      setIsDotClick(false);
     }
-  }, [currentIndex, isTransitioning, isAnimating]);
+  }, [currentIndex, isTransitioning, isAnimating, isDotClick]);
 
   useEffect(() => {
     if (autoplayRef.current) clearInterval(autoplayRef.current);
