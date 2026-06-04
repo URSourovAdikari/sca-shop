@@ -22,38 +22,32 @@ const originalSlides: SlideData[] = [
   {
     id: "slide-1",
     bgClass:
-      "bg-gradient-to-br from-orange-100 via-orange-50 to-rose-100 dark:from-orange-950/40 dark:via-neutral-950 dark:to-rose-950/40",
+      "bg-gradient-to-br from-orange-100 to-rose-100 dark:from-neutral-950 dark:to-neutral-950",
     content: (
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-16 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-20">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-20">
         
-        {/* Background Glow Effect */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 right-0 w-96 h-96 bg-orange-400/15 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute -bottom-40 left-1/4 w-96 h-96 bg-rose-400/10 rounded-full blur-3xl animate-pulse" />
-        </div>
-
         {/* TEXT */}
-        <div className="text-center lg:text-left max-w-xl relative z-10">
+        <div className="text-center lg:text-left max-w-xl">
           <motion.h1
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-neutral-900 dark:text-white mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-neutral-950 dark:text-white mb-6"
           >
             Deliciously Fresh, <br />
-            <span className="bg-gradient-to-r from-orange-600 to-rose-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-600 to-rose-600 bg-clip-text text-transparent">
               Delivered Fast
             </span>
           </motion.h1>
  
-          <p className="text-sm sm:text-base md:text-lg text-neutral-700 dark:text-neutral-300 mb-10 font-medium leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-neutral-800 dark:text-neutral-200 mb-8 sm:mb-10 font-medium leading-relaxed">
             Satisfy your cravings with the city's best burgers, pizzas, and more. 
             Quality you can taste, speed you can trust, straight to your doorstep.
           </p>
  
           <Link
             href="/services"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm md:text-base shadow-lg shadow-orange-500/30 transition-all hover:scale-105 hover:-translate-y-1"
+            className="inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-2xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm md:text-base shadow-lg shadow-orange-600/40 transition-all hover:scale-105 hover:-translate-y-1"
           >
             Order Now
             <ArrowRight size={20} />
@@ -61,9 +55,9 @@ const originalSlides: SlideData[] = [
         </div>
  
         {/* ICON */}
-        <div className="relative flex items-center justify-center w-64 h-64 md:w-80 md:h-80 z-10">
-          <div className="absolute inset-0 rounded-full bg-orange-500/15 dark:bg-orange-500/10 blur-3xl animate-pulse" />
-          <Utensils className="w-28 h-28 md:w-36 md:h-36 text-orange-500 drop-shadow-[0_0_30px_rgba(249,115,22,0.5)]" />
+        <div className="relative flex items-center justify-center w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80">
+          <div className="absolute inset-0 rounded-full bg-orange-400/25 dark:bg-orange-500/20 blur-3xl animate-pulse" />
+          <Utensils className="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 text-orange-600 dark:text-orange-400 drop-shadow-[0_0_30px_rgba(249,115,22,0.6)]" />
         </div>
       </div>
     ),
@@ -72,38 +66,32 @@ const originalSlides: SlideData[] = [
   {
     id: "slide-2",
     bgClass:
-      "bg-gradient-to-bl from-amber-100 via-amber-50 to-yellow-100 dark:from-neutral-950 dark:via-amber-950/40 dark:to-neutral-950",
+      "bg-gradient-to-bl from-amber-100 to-yellow-100 dark:from-neutral-950 dark:to-neutral-950",
     content: (
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-16 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-20">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-20">
         
-        {/* Background Glow Effect */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 right-0 w-96 h-96 bg-amber-400/15 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute -bottom-40 left-1/4 w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl animate-pulse" />
-        </div>
-
         {/* TEXT */}
-        <div className="text-center lg:text-left max-w-xl relative z-10">
+        <div className="text-center lg:text-left max-w-xl">
           <motion.h2
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-neutral-900 dark:text-white mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-neutral-950 dark:text-white mb-6"
           >
             Unforgettable <br />
-            <span className="bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
               Pizza Night
             </span>
           </motion.h2>
  
-          <p className="text-sm sm:text-base md:text-lg text-neutral-700 dark:text-neutral-300 mb-10 font-medium leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-neutral-800 dark:text-neutral-200 mb-8 sm:mb-10 font-medium leading-relaxed">
             From thin crust to deep dish, our master chefs prepare the most 
             delicious pizzas in town using fresh ingredients and handmade dough.
           </p>
  
           <Link
             href="/services"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-sm md:text-base shadow-lg shadow-amber-500/30 transition-all hover:scale-105 hover:-translate-y-1"
+            className="inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-2xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-sm md:text-base shadow-lg shadow-amber-600/40 transition-all hover:scale-105 hover:-translate-y-1"
           >
             Explore Menu
             <ArrowRight size={20} />
@@ -111,9 +99,9 @@ const originalSlides: SlideData[] = [
         </div>
  
         {/* ICON */}
-        <div className="relative flex items-center justify-center w-64 h-64 md:w-80 md:h-80 z-10">
-          <div className="absolute inset-0 rounded-full bg-amber-500/15 dark:bg-amber-500/10 blur-3xl animate-pulse" />
-          <Pizza className="w-28 h-28 md:w-36 md:h-36 text-amber-500 drop-shadow-[0_0_30px_rgba(245,158,11,0.5)]" />
+        <div className="relative flex items-center justify-center w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80">
+          <div className="absolute inset-0 rounded-full bg-amber-400/25 dark:bg-amber-500/20 blur-3xl animate-pulse" />
+          <Pizza className="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 text-amber-600 dark:text-amber-400 drop-shadow-[0_0_30px_rgba(245,158,11,0.6)]" />
         </div>
       </div>
     ),
@@ -122,44 +110,38 @@ const originalSlides: SlideData[] = [
   {
     id: "slide-3",
     bgClass:
-      "bg-gradient-to-tr from-rose-100 via-pink-50 to-orange-100 dark:from-neutral-950 dark:via-rose-950/40 dark:to-neutral-950",
+      "bg-gradient-to-tr from-rose-100 to-pink-100 dark:from-neutral-950 dark:to-neutral-950",
     content: (
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-16 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-20">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-20">
         
-        {/* Background Glow Effect */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 right-0 w-96 h-96 bg-rose-400/15 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute -bottom-40 left-1/4 w-96 h-96 bg-pink-400/10 rounded-full blur-3xl animate-pulse" />
-        </div>
-
         {/* TEXT */}
-        <div className="text-center lg:text-left max-w-xl relative z-10">
+        <div className="text-center lg:text-left max-w-xl">
           <motion.h2
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-neutral-900 dark:text-white mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-neutral-950 dark:text-white mb-6"
           >
             Taste the <br />
-            <span className="bg-gradient-to-r from-rose-600 to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">
               Exclusive Vibe
             </span>
           </motion.h2>
  
-          <p className="text-sm sm:text-base md:text-lg text-neutral-700 dark:text-neutral-300 mb-10 font-medium leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-neutral-800 dark:text-neutral-200 mb-8 sm:mb-10 font-medium leading-relaxed">
             Join the SCA Shop family for exclusive member-only deals, birthday treats, 
             and points on every tasty bite you take.
           </p>
  
-          <button className="px-8 py-4 rounded-2xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm md:text-base shadow-lg shadow-rose-500/30 transition-all hover:scale-105 hover:-translate-y-1">
+          <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-2xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm md:text-base shadow-lg shadow-rose-600/40 transition-all hover:scale-105 hover:-translate-y-1">
             Join the Club
           </button>
         </div>
  
         {/* ICON */}
-        <div className="relative flex items-center justify-center w-64 h-64 md:w-80 md:h-80 z-10">
-          <div className="absolute inset-0 rounded-full bg-rose-500/15 dark:bg-rose-500/10 blur-3xl animate-pulse" />
-          <BurgerIcon size={144} className="text-rose-500 drop-shadow-[0_0_30px_rgba(225,29,72,0.5)]" />
+        <div className="relative flex items-center justify-center w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80">
+          <div className="absolute inset-0 rounded-full bg-rose-400/25 dark:bg-rose-500/20 blur-3xl animate-pulse" />
+          <BurgerIcon size={144} className="text-rose-600 dark:text-rose-400 drop-shadow-[0_0_30px_rgba(225,29,72,0.6)]" />
         </div>
       </div>
     ),
@@ -328,7 +310,7 @@ export default function ImageSlider() {
   }, [handleMouseMove, handleMouseUp]);
 
   return (
-    <div className="relative w-full h-screen min-h-[500px] overflow-hidden shadow-lg border-y border-neutral-200 dark:border-white/5 bg-white dark:bg-neutral-900 transition-colors duration-500">
+    <div className="relative w-full h-screen min-h-[500px] overflow-hidden shadow-lg border-y border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 transition-colors duration-500">
       <div
         className={`image-slider-track relative h-full flex ${
           isTransitioning ? "transition-transform duration-1000 cubic-bezier(0.16, 1, 0.3, 1)" : "transition-none"
@@ -340,7 +322,7 @@ export default function ImageSlider() {
         onMouseDown={handleMouseDown}
       >
         {extendedSlides.map((slide, index) => (
-          <div key={`${slide.id}-${index}`} className={`relative w-full h-full object-cover object-center flex-shrink-0 flex items-center justify-center ${slide.bgClass || 'bg-white dark:bg-neutral-900'}`}>
+          <div key={`${slide.id}-${index}`} className={`relative w-full h-full object-cover object-center flex-shrink-0 flex items-center justify-center ${slide.bgClass || 'bg-white dark:bg-neutral-950'}`}>
             {slide.image && (
               <div className="absolute inset-0 w-full h-full">
                 <Image
@@ -351,7 +333,7 @@ export default function ImageSlider() {
                   style={{ objectFit: "cover" }}
                   priority={index === 1}
                 />
-                <div className="absolute inset-0 bg-neutral-900/10 dark:bg-neutral-950/40" />
+                <div className="absolute inset-0 bg-neutral-900/10 dark:bg-neutral-900/30" />
               </div>
             )}
             {slide.content && (
@@ -365,7 +347,7 @@ export default function ImageSlider() {
 
       {/* Navigation Buttons - Hidden on small mobile */}
       <button
-        className="hidden md:flex absolute left-8 top-1/2 transform -translate-y-1/2 bg-white/20 dark:bg-white/5 backdrop-blur-md text-neutral-900 dark:text-white p-4 lg:p-5 rounded-full hover:bg-white/30 dark:hover:bg-white/10 transition-all hover:scale-110 group disabled:opacity-50 disabled:cursor-not-allowed"
+        className="hidden md:flex absolute left-6 md:left-8 top-1/2 transform -translate-y-1/2 bg-white/30 dark:bg-white/10 backdrop-blur-md text-neutral-900 dark:text-white p-3 md:p-4 lg:p-5 rounded-full hover:bg-white/50 dark:hover:bg-white/20 border border-neutral-400 dark:border-white/20 transition-all duration-300 z-30 group shadow-xl hover:shadow-2xl"
         onClick={prevSlide}
         aria-label="Previous slide"
         disabled={isAnimating}
@@ -374,7 +356,7 @@ export default function ImageSlider() {
       </button>
 
       <button
-        className="hidden md:flex absolute right-8 top-1/2 transform -translate-y-1/2 bg-white/20 dark:bg-white/5 backdrop-blur-md text-neutral-900 dark:text-white p-4 lg:p-5 rounded-full hover:bg-white/30 dark:hover:bg-white/10 transition-all hover:scale-110 group disabled:opacity-50 disabled:cursor-not-allowed"
+        className="hidden md:flex absolute right-6 md:right-8 top-1/2 transform -translate-y-1/2 bg-white/30 dark:bg-white/10 backdrop-blur-md text-neutral-900 dark:text-white p-3 md:p-4 lg:p-5 rounded-full hover:bg-white/50 dark:hover:bg-white/20 border border-neutral-400 dark:border-white/20 transition-all duration-300 z-30 group shadow-xl hover:shadow-2xl"
         onClick={nextSlide}
         aria-label="Next slide"
         disabled={isAnimating}
@@ -383,15 +365,15 @@ export default function ImageSlider() {
       </button>
 
       {/* Progress Bar Container */}
-      <div className="absolute top-0 left-0 w-full h-1 z-40">
+      <div className="absolute top-0 left-0 w-full h-1 z-40 bg-neutral-200 dark:bg-neutral-800">
         <div
-          className="h-full bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-emerald-500 transition-all ease-linear"
+          className="h-full bg-gradient-to-r from-indigo-600 via-fuchsia-600 to-emerald-600 transition-all ease-linear"
           style={{ width: `${progress}%`, transitionDuration: "50ms" }}
         ></div>
       </div>
 
       {/* Dots and Indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-3 px-5 py-2.5 bg-white/40 dark:bg-black/20 backdrop-blur-xl rounded-full border border-neutral-200 dark:border-white/10 z-30">
+      <div className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-2 md:gap-3 px-4 md:px-5 py-2 md:py-2.5 bg-white/60 dark:bg-black/40 backdrop-blur-xl rounded-full border border-neutral-300 dark:border-white/20 z-30 shadow-xl transition-colors duration-500">
         {originalSlides.map((_, index) => (
           <button
             key={index}
@@ -406,14 +388,14 @@ export default function ImageSlider() {
               currentIndex === index + 1 ||
               (currentIndex === 0 && index === originalSlides.length - 1) ||
               (currentIndex === extendedSlides.length - 1 && index === 0)
-                ? "w-8 md:w-14 bg-indigo-600 dark:bg-white"
-                : "w-2 md:w-6 bg-neutral-900/20 dark:bg-white/20 hover:bg-neutral-900/40 dark:hover:bg-white/40"
+                ? "w-8 md:w-12 bg-indigo-700 dark:bg-white shadow-lg"
+                : "w-2 md:w-4 bg-neutral-700 dark:bg-neutral-300 hover:bg-neutral-900 dark:hover:bg-white"
             }`}
             aria-current={currentIndex === index + 1}
             aria-label={`Go to slide ${index + 1}`}
             disabled={isAnimating}
           >
-            <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-neutral-900 dark:bg-white text-white dark:text-black text-[10px] font-bold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-neutral-900 dark:bg-white text-white dark:text-black text-[10px] font-bold rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none shadow-xl transform translate-y-2 group-hover:translate-y-0 whitespace-nowrap">
               0{index + 1}
             </span>
           </button>
