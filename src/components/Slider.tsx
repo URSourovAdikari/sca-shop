@@ -184,6 +184,13 @@ export default function ImageSlider() {
     setCurrentIndex((prevIndex) => prevIndex - 1);
   }, [isAnimating]);
 
+  const goToSlide = useCallback((index: number) => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setIsTransitioning(true);
+    setCurrentIndex(index + 1);
+  }, [isAnimating]);
+
   useEffect(() => {
     if (!isTransitioning && (currentIndex === 0 || currentIndex === extendedSlides.length - 1)) {
       const timeoutId = setTimeout(() => {
@@ -378,12 +385,7 @@ export default function ImageSlider() {
           <button
             key={index}
             type="button"
-            onClick={() => {
-              if (isAnimating) return;
-              setIsAnimating(true);
-              setIsTransitioning(true);
-              setCurrentIndex(index + 1);
-            }}
+            onClick={() => goToSlide(index)}
             className={`group relative h-1 md:h-1.5 rounded-full transition-all duration-500 ease-in-out ${
               currentIndex === index + 1 ||
               (currentIndex === 0 && index === originalSlides.length - 1) ||
